@@ -1,0 +1,162 @@
+/* Estrutura base do corpinho do popup */
+body { 
+  width: 320px; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  padding: 15px; 
+  margin: 0; 
+  color: #333; 
+  text-align: center; 
+}
+
+/* Título superior com separador (borda inferior) */
+h3 { 
+  margin-top: 0; 
+  color: #154360; 
+  font-size: 16px; 
+  margin-bottom: 20px; 
+  border-bottom: 1px solid #eee; 
+  padding-bottom: 10px;
+}
+
+/* TELA INICIAL (UPLOAD) */
+#tela-upload { 
+  display: block; 
+}
+
+input[type="file"] { 
+  margin-bottom: 15px; 
+  width: 100%; 
+}
+
+/* Botão Verde de inicialização */
+.btn-iniciar { 
+  background-color: #2e7d32; 
+  color: white; 
+  padding: 10px; 
+  width: 100%; 
+  border: none; 
+  border-radius: 6px; 
+  cursor: pointer; 
+  font-weight: bold; 
+}
+.btn-iniciar:hover { 
+  background-color: #1b5e20; 
+}
+
+/* TELA DE PROGRESSO (Oculta por padrão) */
+#tela-progresso { 
+  display: none; 
+}
+
+.texto-progresso { 
+  font-size: 14px; 
+  margin-bottom: 10px; 
+  color: #555; 
+}
+
+/* Container cinza da barra de progresso */
+.barra-fundo { 
+  background-color: #e0e0e0; 
+  border-radius: 10px; 
+  height: 12px; 
+  width: 100%; 
+  overflow: hidden; 
+  margin-bottom: 5px; 
+}
+
+/* Barra verde interna (animada com width manipulado via Javascript) */
+.barra-preenchimento { 
+  background-color: #2ecc71; 
+  height: 100%; 
+  width: 0%; 
+  transition: width 0.3s ease; /* Transição suave de preenchimento */
+}
+
+/* Percentual numérico na tela de progresso */
+.porcentagem { 
+  color: #2ecc71; 
+  font-weight: bold; 
+  font-size: 16px; 
+  margin: 5px 0 10px 0; 
+}
+
+/* Exibe "Baixando: CÓDIGO - NOME" com quebra inteligente de linha */
+.texto-arquivo { 
+  font-size: 12px; 
+  color: #666; 
+  margin-bottom: 20px; 
+  min-height: 30px; 
+  word-break: break-all; 
+}
+
+/* Botões do controlador */
+.botoes-acao { 
+  display: flex; 
+  gap: 10px; 
+  justify-content: center; 
+}
+
+.btn-acao { 
+  padding: 10px 15px; 
+  border: none; 
+  border-radius: 6px; 
+  cursor: pointer; 
+  font-weight: bold; 
+  width: 50%; 
+  color: white; 
+}
+
+/* Variações de cor dos botões de controle (Pausar/Cancelar) */
+.btn-amarelo { 
+  background-color: #f1c40f; 
+  color: #333; 
+}
+.btn-amarelo:hover { 
+  background-color: #d4ac0d; 
+}
+
+.btn-vermelho { 
+  background-color: #e74c3c; 
+}
+.btn-vermelho:hover { 
+  background-color: #c0392b; 
+}
+
+/* ESTILOS DO RODAPÉ (FOOTER) */
+footer {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.copyright {
+  font-size: 13px;
+  font-weight: 700;
+  color: #154360;
+  margin-bottom: 8px;
+}
+
+/* Flexbox para alinhar ícones lado a lado de forma simétrica */
+.links-footer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.links-footer a {
+  text-decoration: none;
+  color: #555;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s;
+}
+
+.links-footer a:hover {
+  color: #154360;
+}
+
+.links-footer i {
+  font-size: 16px;
+}

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "SIPRA Beneficiários para PDF",
+  "version": "1.0",
+  "description": "Acessa páginas de beneficiários do SIPRA/INCRA e as salva em PDF automaticamente.",
+  "permissions": [
+    "tabs",
+    "downloads",
+    "activeTab",
+    "debugger",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://sipra.incra.gov.br/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

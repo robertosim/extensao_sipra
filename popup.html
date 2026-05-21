@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h3>SIPRA Beneficiários para PDF</h3>
+
+  <div id="tela-upload">
+    <label for="csvFile" style="display:block; margin-bottom: 8px; font-size: 13px; text-align: left;">Carregue a lista de códigos (.csv):</label>
+    <input type="file" id="csvFile" accept=".csv">
+    <button id="btnIniciar" class="btn-iniciar">Iniciar Extração</button>
+  </div>
+
+  <div id="tela-progresso">
+    <div class="texto-progresso" id="lblProcessando">Processando: 0 / 0</div>
+    
+    <div class="barra-fundo">
+      <div class="barra-preenchimento" id="barraProgresso"></div>
+    </div>
+    
+    <div class="porcentagem" id="lblPorcentagem">0%</div>
+    
+    <div class="texto-arquivo" id="lblArquivoAtual">Aguardando...</div>
+    
+    <div class="botoes-acao">
+      <button id="btnPausarContinuar" class="btn-acao btn-amarelo">Pausar</button>
+      <button id="btnCancelar" class="btn-acao btn-vermelho">Cancelar</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="copyright">Copyright © 2026 - Roberto Simões</div>
+    <div class="links-footer">
+      <a href="mailto:robsimoes@gmail.com" class="link-externo">
+        <i class="fa-solid fa-envelope"></i> E-mail
+      </a>
+      <a href="https://wa.me/5548996793828" class="link-externo">
+        <i class="fa-solid fa-comment"></i> WhatsApp
+      </a>
+    </div>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
