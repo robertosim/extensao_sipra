@@ -1,6 +1,6 @@
 # SIPRA Beneficiários para PDF 🚀
 
-Uma extensão para o Google Chrome (**Manifest V3**) desenvolvida para automatizar o acesso às páginas de espelhos de beneficiários do **SIPRA (INCRA)** e realizar o download automático dos relatórios em formato PDF de forma oculta e em lote.
+Uma extensão para o Google Chrome (**Manifest V3**) desenvolvida para automatizar o acesso às páginas de espelhos de beneficiários do **SIPRA (INCRA)** e realizar o download automático dos espelhos dos beneficiários em formato PDF de forma oculta e em lote.
 
 ---
 
@@ -21,9 +21,10 @@ Uma extensão para o Google Chrome (**Manifest V3**) desenvolvida para automatiz
 ├── popup.css           # Estilização visual moderna do painel
 ├── popup.js            # Lógica de interface, leitura do CSV e comunicação com o Service Worker
 └── background.js       # Service worker (motor de automação, manipulação de abas, PDF e downloads)
-
 ```
+
 ---
+
 ## 🛠️ Como Instalar no Modo Desenvolvedor
 Como Instalar no Modo Desenvolvedor
 
@@ -38,11 +39,24 @@ No canto superior esquerdo, clique em "Carregar sem compactação".
 Selecione a pasta raiz que contém os arquivos deste projeto.
 
 Pronto! O ícone da extensão estará disponível na sua barra de ferramentas de extensões.
+
 ---
+
 ## 📖 Instruções de Uso
-🔹 Passo 1: Preparação do ArquivoCrie ou exporte um arquivo .csv contendo a lista de beneficiários. O sistema espera que o código de identificação esteja na 1ª coluna e o nome na 3ª coluna (separados por vírgula). A primeira linha (cabeçalho) é ignorada.
-🔹 Passo 2: ExecuçãoClique no ícone da extensão para abrir o popup.Faça o upload do arquivo .csv preparado.Clique em Iniciar Extração.A extensão começará a processar a fila, abrindo abas em segundo plano, gerando o PDF e baixando automaticamente para a sua pasta padrão de downloads. Você pode acompanhar o progresso ou pausar a qualquer momento.
+
+🔹 Passo 1: Preparação do Arquivo
+1. Crie ou exporte um arquivo .csv contendo a lista de beneficiários. 
+2. O sistema espera que o código de identificação esteja na 1ª coluna e o nome na 3ª coluna (separados por vírgula). 
+3. A primeira linha (cabeçalho) é ignorada.
+
+🔹 Passo 2: Execução
+1. Clique no ícone da extensão para abrir o popup.
+2. Faça o upload do arquivo .csv preparado.
+3. Clique em Iniciar Extração.
+4. A extensão começará a processar a fila, abrindo abas em segundo plano, gerando o PDF e baixando automaticamente para a sua pasta padrão de downloads. Você pode acompanhar o progresso ou pausar a qualquer momento.
+
 ---
+
 ## ⚙️ Permissões Utilizadas
 | Permissão | Finalidade |
 | :--- | :--- |
@@ -51,7 +65,9 @@ Pronto! O ícone da extensão estará disponível na sua barra de ferramentas de
 | `debugger` | Para anexar o depurador do Chrome à aba e disparar o comando silencioso de impressão (Page.printToPDF). |
 | `storage` | Para persistir a fila de trabalho e o estado (pausado/processando) mesmo que o popup seja fechado. |
 | `activeTab` | Garante acesso temporário à aba ativa quando necessário pela interface. |
+
 ---
+
 ## 📞 Suporte e Contato
 Desenvolvido por Roberto Simões. Caso precise de suporte personalizado, melhorias no sistema ou queira relatar algum comportamento indesejado, entre em contato pelos canais oficiais dispostos na interface:
 
